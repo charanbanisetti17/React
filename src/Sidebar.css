@@ -1,0 +1,98 @@
+/* Sidebar container styles */
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: width 0.3s ease; /* Smooth transition for sidebar resizing */
+  }
+  
+  /* Remove default list styles */
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  /* Link styles */
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    text-decoration: underline;
+    color: #ff9900; /* Hover color */
+  }
+  
+  /* Active link styling */
+  .sidebar ul li a.active-link {
+    font-weight: bold;
+    border-left: 3px solid #ff9900;
+    padding-left: 10px;
+  }
+  
+  /* Logout button styling */
+  .logout-btn {
+    background-color: #ff3b30;  /* Red color for logout button */
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Spacing from other list items */
+    border-radius: 5px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #e60000; /* Darker red on hover */
+    transform: scale(1.05); /* Slight scale animation on hover */
+  }
+  
+  .logout-btn:focus {
+    outline: none; /* Remove focus outline for better UI */
+  }
+  
+  /* Animation for logout button */
+  .logout-btn:active {
+    animation: button-press 0.2s forwards;
+  }
+  
+  /* Keyframes for button press animation */
+  @keyframes button-press {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 150px;  /* Narrower sidebar on smaller screens */
+    }
+  
+    .sidebar ul li {
+      margin: 5px 0; /* Reduce margin for mobile */
+    }
+  
+    .sidebar ul li a {
+      font-size: 14px; /* Smaller font for mobile */
+    }
+  
+    .logout-btn {
+      font-size: 14px; /* Smaller logout button on mobile */
+    }
+  }

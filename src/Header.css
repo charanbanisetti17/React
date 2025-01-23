@@ -1,0 +1,188 @@
+/* General header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .header:hover {
+    background-color: #444;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease;
+  }
+  
+  .header:hover h1 {
+    transform: scale(1.05);
+  }
+  
+  /* Header actions container (for search bar, cart link, login/signup) */
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Search Bar and Button Styles */
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  
+  .search-bar {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    width: 200px;
+    transition: width 0.3s ease, transform 0.3s ease;
+  }
+  
+  .search-bar::placeholder {
+    color: #888;
+  }
+  
+  .search-bar:focus {
+    width: 250px;
+    transform: scale(1.05);
+  }
+  
+  .search-bar:focus::placeholder {
+    color: #333;
+  }
+  
+  /* Search Button Styles */
+  .search-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #ff5722; /* Vibrant color */
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+  }
+  
+  .search-button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Cart Link Styles */
+  .cart-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cart-link:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  .cart-link:active {
+    transform: translateY(1px);
+  }
+  
+  /* Add animation for cart when it has items */
+  .cart-link.has-items {
+    color: #ff5722;
+    font-weight: bold;
+    animation: cart-animation 0.5s ease-out infinite alternate;
+  }
+  
+  /* Cart animation */
+  @keyframes cart-animation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Login & Sign Up Links */
+  .auth-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .auth-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .auth-link:hover {
+    background-color: #ff5722;
+    transform: translateY(-3px);
+  }
+  
+  .auth-link:active {
+    transform: translateY(1px);
+  }
+  
+  .signup-link {
+    background-color: #4caf50; 
+  }
+  
+  .signup-link:hover {
+    background-color: #388e3c; 
+  }
+  
+  /* Responsiveness - Mobile */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .header-actions {
+      margin-top: 1rem;
+      flex-direction: column;
+    }
+  
+    .search-bar {
+      width: 80%;
+      margin-bottom: 1rem;
+    }
+  
+    .cart-link {
+      margin-top: 1rem;
+    }
+  
+    .auth-links {
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .search-bar:focus {
+      width: 100%;
+    }
+  }
